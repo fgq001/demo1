@@ -27,5 +27,6 @@ public class Test {
         udao.save(u);
         session.commit();
 
+        System.out.println("========");
     }
 }
