@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC
+        "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.njbdqn.demo.dao.IUserDAO">
+    <insert id="save" parameterType="user">
+        insert into userinfos(username,birthday) values(#{username},#{birthday})
+    </insert>
+    <delete id="del" parameterType="int">
+        delete from userinfos where userid=#{userid}
+    </delete>
+    <update id="update" parameterType="user">
+        update userinfos set username=#{username},birthday=#{birthday}
+          where userid=#{userid}
+    </update>
+    <select id="findAll" resultType="user">
+        select * from userinfos
+    </select>
+    <select id="findById" parameterType="int" resultType="user">
+        select * from userinfos where userid=#{userid}
+    </select>
+</mapper>
