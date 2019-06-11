@@ -28,5 +28,6 @@ public class Test {
         session.commit();
 
         System.out.println("========");
+        System.out.println("这是分支");
     }
 }
